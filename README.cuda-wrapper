@@ -1,0 +1,33 @@
+			CUDA Wrapper for WINE
+			=====================
+Light implementation of CUDA application libraries wrapper enables 
+your wine application direct access to power of CUDA cards.
+
+Installation
+============
+      Copy files to cloned wine-git/dlls source folder, make and copy libraries.
+      Then you can add your new libraries wrapper to libraries as builtin.
+      - cublas.dll
+      - cufft.dll
+
+Make and Compile
+================
+	cd wine-git
+	make
+
+Sources
+=======
+      Updated sources are available on git://github.com/sjurajpuchky/cuda-wine-wrapper
+
+Authors
+=======
+      1) Seth Shellnut
+      2) Juraj Puchký - Devtech <sjurajpuchky@seznam.cz>
+
+Originaly forked from git://github.com/Shelnutt2/cuda-wine-wrapper
+
+History
+=======
+     @fix 27.2.2014 Fixed cudaMalloc3DArray,cudaMallocArray - Juraj Puchký - Devtech <sjurajpuchky@seznam.cz>
+     @add 27.2.2014 Added README
+
