@@ -3,12 +3,13 @@
 Light implementation of CUDA application libraries wrapper enables 
 your wine application direct access to power of CUDA cards.
 
+
 Installation
 ============
       Copy files to cloned wine-git/dlls source folder, make and copy libraries.
       Then you can add your new libraries wrapper to libraries as builtin.
-      - cublas.dll
-      - cufft.dll
+      - cublas.dll.so
+      - cufft.dll.so
 
 Make and Compile
 ================
@@ -30,4 +31,6 @@ History
 =======
      @fix 27.2.2014 Fixed cudaMalloc3DArray,cudaMallocArray - Juraj Puchký - Devtech <sjurajpuchky@seznam.cz>
      @add 27.2.2014 Added README
+     @fix 27.2.2014 Fixed depencies and added support of 64bit compilations -m64 for wine64
+     @add 27.2.2014 Added comments to missing functions, will fixed
 

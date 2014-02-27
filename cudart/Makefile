@@ -18,7 +18,7 @@ INCLUDE_PATH          = -I/usr/local/cuda/include/
 DLL_PATH              =
 DLL_IMPORTS           =
 LIBRARY_PATH          = -L/usr/local/cuda/lib64/
-LIBRARIES             = -lcudart
+LIBRARIES             = -lcudart -lcuda
 
 
 ### cudart.dll sources and settings

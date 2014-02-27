@@ -7,14 +7,14 @@
 
 #include <windows.h>
 #include "crt/host_runtime.h"
-//#include "device_functions.h"  //used in the functions cudaSynchronizeThreads
+#include "device_functions.h"  //used in the functions cudaSynchronizeThreads
 #include "sm_20_atomic_functions.h"
 #include "texture_fetch_functions.h"
 #include "cuda_runtime_api.h"
 #include "cuda_gl_interop.h"
 #include "driver_functions.h"
 #include "driver_types.h"
-//#include "math_functions.h"
+// #include "math_functions.h"
 #include <stdlib.h>
 #include <time.h>
 #include <GL/gl.h>
@@ -830,8 +830,8 @@ void WINAPI wine_cudaRegisterFunction( void **fatCubinHandle, const char *hostFu
 *******************************************************************************/
 
 int WINAPI wine_cudaSynchronizeThreads( void **one, void *two  ){
-	WINE_TRACE("\n");
-	return __cudaSynchronizeThreads( one, two );
+	WINE_TRACE("Fix it::cudaSynchronizeThreads\n");
+	//return __cudaSynchronizeThreads( one, two );
 }
 
 
@@ -842,8 +842,8 @@ int WINAPI wine_cudaSynchronizeThreads( void **one, void *two  ){
 *******************************************************************************/
 
 void WINAPI wine_cudaTextureFetch( const void *tex, void *index, int integer, void *val ){
-	WINE_TRACE("\n");
-	return __cudaTextureFetch( tex, index, integer, val );
+	WINE_TRACE("Fix it::cudaTextureFetch\n");
+	//return __cudaTextureFetch( tex, index, integer, val );
 }
 
 /*******************************************************************************
@@ -853,7 +853,7 @@ void WINAPI wine_cudaTextureFetch( const void *tex, void *index, int integer, vo
 *******************************************************************************/
 
 void WINAPI wine_cudaMutexOperation( int lock ){
-	WINE_TRACE("\n");
-	return __cudaMutexOperation( lock );
+	WINE_TRACE("Fix it::cudaMutexOperation\n");
+	//return __cudaMutexOperation( lock );
 }
 
