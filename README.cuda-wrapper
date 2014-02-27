@@ -8,7 +8,7 @@ Installation
 ============
       Copy files to cloned wine-git/dlls source folder, make and copy libraries.
       Then you can add your new libraries wrapper to libraries as builtin.
-      - cublas.dll.so
+      - cudart.dll.so
       - cufft.dll.so
 
 Make and Compile
