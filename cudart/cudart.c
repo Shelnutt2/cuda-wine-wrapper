@@ -1,5 +1,7 @@
 /*This is a wrapper for cudart32_30_14.dll and libcudart.so.3.0.14
  Copyrighted by Seth Shelnutt under the LGPL v2.1 or later
+ 
+ @fix 27.2.2014 Fixed cudaMalloc3DArray,cudaMallocArray - Juraj Puchký - Devtech <sjurajpuchky@seznam.cz>
  */
 
 
@@ -121,9 +123,9 @@ cudaError_t WINAPI wine_cudaMalloc3D( struct cudaPitchedPtr* pitchDevPtr, struct
 }
 
 
-cudaError_t WINAPI wine_cudaMalloc3DArray( struct cudaArray** arrayPtr, const struct cudaChannelFormatDesc* desc, struct cudaExtent extent ){
+cudaError_t WINAPI wine_cudaMalloc3DArray(cudaArray_t *array, const struct cudaChannelFormatDesc* desc, struct cudaExtent extent, unsigned int flags){
         WINE_TRACE("\n");
-	return cudaMalloc3DArray( arrayPtr, desc, extent );
+	return cudaMalloc3DArray( array, desc, extent, flags );
 }
 
 cudaError_t WINAPI wine_cudaMemset3D( struct cudaPitchedPtr pitchedDevPtr, int value, struct cudaExtent extent ){
@@ -163,9 +165,9 @@ cudaError_t WINAPI wine_cudaMallocPitch( void** devPtr, size_t* pitch, size_t wi
 	return cudaMallocPitch( devPtr, pitch, widthInBytes, height );
 }
 
-cudaError_t WINAPI wine_cudaMallocArray( struct cudaArray** array, const struct cudaChannelFormatDesc* desc, size_t width, size_t height ){
+cudaError_t WINAPI wine_cudaMallocArray(cudaArray_t *array, const struct cudaChannelFormatDesc *desc, size_t width, size_t height, unsigned int flags) {
 	WINE_TRACE("\n");
-	return cudaMallocArray( array, desc, width, height);
+	return cudaMallocArray( array, desc, width, height, flags);
 }
 
 

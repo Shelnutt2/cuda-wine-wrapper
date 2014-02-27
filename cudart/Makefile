@@ -10,14 +10,14 @@ EXES                  =
 
 ### Common settings
 
-CEXTRA                = -mno-cygwin -m32
-CXXEXTRA              = -mno-cygwin -m32
+CEXTRA                = -mno-cygwin -m64
+CXXEXTRA              = -mno-cygwin -m64
 RCEXTRA               =
 DEFINES               = 
 INCLUDE_PATH          = -I/usr/local/cuda/include/
 DLL_PATH              =
 DLL_IMPORTS           =
-LIBRARY_PATH          = -L/usr/local/cuda/lib/
+LIBRARY_PATH          = -L/usr/local/cuda/lib64/
 LIBRARIES             = -lcudart
 
 
