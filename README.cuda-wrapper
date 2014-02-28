@@ -14,7 +14,8 @@ Installation
 Make and Compile
 ================
 	cd wine-git
-	autoreconf
+	git clone git://github.com/sjurajpuchky/cuda-wine-wrapper
+	cp -r cuda-wine-wrapper/* ./
 	./configure
 	make
 	make install
@@ -37,4 +38,4 @@ History
      @fix 27.2.2014 Fixed depencies and added support of 64bit compilations -m64 for wine64
      @add 27.2.2014 Added comments to missing functions, will fixed
      @fix 28.2.2014 Fixed structure of files for copy patch directly to wine-git clone foleder
-
+     @fix 28.2.2014 Added patch for configure to enable cuda support
