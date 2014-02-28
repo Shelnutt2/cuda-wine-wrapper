@@ -1,0 +1,4 @@
+MODULE    = cufft.dll
+
+C_SRCS = \
+	cufft.c
