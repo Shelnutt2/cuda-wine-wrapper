@@ -6,7 +6,7 @@ your wine application direct access to power of CUDA cards.
 
 Installation
 ============
-      Copy files to cloned wine-git/dlls source folder, make and copy libraries.
+      Copy files to cloned wine-git source folder, make and copy libraries.
       Then you can add your new libraries wrapper to libraries as builtin.
       - cudart.dll.so
       - cufft.dll.so
@@ -14,6 +14,8 @@ Installation
 Make and Compile
 ================
 	cd wine-git
+	autoreconf
+	./configure
 	make
 	make install
 
@@ -34,4 +36,5 @@ History
      @add 27.2.2014 Added README
      @fix 27.2.2014 Fixed depencies and added support of 64bit compilations -m64 for wine64
      @add 27.2.2014 Added comments to missing functions, will fixed
+     @fix 28.2.2014 Fixed structure of files for copy patch directly to wine-git clone foleder
 
