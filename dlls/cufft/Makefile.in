@@ -2,3 +2,5 @@ MODULE    = cufft.dll
 
 C_SRCS = \
 	cufft.c
+
+LIBS = -lm -lcuda -lcufft

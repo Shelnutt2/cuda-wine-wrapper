@@ -2,3 +2,5 @@ MODULE    = cudart.dll
 
 C_SRCS = \
 	cudart.c
+
+LIBS = -lm -lcuda -lcudart

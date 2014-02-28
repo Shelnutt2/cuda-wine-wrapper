@@ -6,14 +6,14 @@
 
 
 #include <windows.h>
-#include "crt/host_runtime.h"
-#include "device_functions.h"  //used in the functions cudaSynchronizeThreads
-#include "sm_20_atomic_functions.h"
-#include "texture_fetch_functions.h"
-#include "cuda_runtime_api.h"
-#include "cuda_gl_interop.h"
-#include "driver_functions.h"
-#include "driver_types.h"
+#include <crt/host_runtime.h>
+#include <device_functions.h>  //used in the functions cudaSynchronizeThreads
+#include <sm_20_atomic_functions.h>
+#include <texture_fetch_functions.h>
+#include <cuda_runtime_api.h>
+#include <cuda_gl_interop.h>
+#include <driver_functions.h>
+#include <driver_types.h>
 // #include "math_functions.h"
 #include <stdlib.h>
 #include <time.h>
