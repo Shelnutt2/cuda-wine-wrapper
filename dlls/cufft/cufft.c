@@ -3,7 +3,7 @@
  */
 
 #include <windows.h>
-#include "cufft.h"
+#include <cufft.h>
 #include <stdlib.h>
 #include <GL/gl.h>
 #include <string.h>

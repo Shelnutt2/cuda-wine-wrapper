@@ -1,0 +1,31 @@
+--- configure.ac	2014-02-28 14:13:06.041999358 +0100
++++ configure.ac	2014-02-28 14:37:07.417998068 +0100
+@@ -2611,6 +2611,8 @@
+ WINE_CONFIG_SYMLINK(,tools,[wine64],enable_win64,winewrapper)
+ 
+ WINE_CONFIG_DLL(acledit)
++WINE_CONFIG_DLL(cudart)
++WINE_CONFIG_DLL(cufft)
+ WINE_CONFIG_DLL(aclui,,[implib])
+ WINE_CONFIG_DLL(activeds,,[implib])
+ WINE_CONFIG_DLL(actxprxy,,[clean])
+--- configure	2014-02-28 14:13:06.038999358 +0100
++++ configure	2014-02-28 14:50:38.426997343 +0100
+@@ -845,6 +845,8 @@
+ enable_largefile
+ with_x
+ enable_acledit
++enable_cudart
++enable_cufft
+ enable_aclui
+ enable_activeds
+ enable_actxprxy
+@@ -16605,6 +16607,8 @@
+ fi
+ 
+ wine_fn_config_dll acledit enable_acledit
++wine_fn_config_dll cudart enable_cudart
++wine_fn_config_dll cufft enable_cufft
+ wine_fn_config_dll aclui enable_aclui implib
+ wine_fn_config_dll activeds enable_activeds implib
+ wine_fn_config_dll actxprxy enable_actxprxy clean

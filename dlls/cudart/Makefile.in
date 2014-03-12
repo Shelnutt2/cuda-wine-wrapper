@@ -1,0 +1,9 @@
+MODULE    = cudart.dll
+
+C_SRCS = \
+	cudart.c
+
+LIBS = -lm -lcuda -lcudart
+override CFLAGS += -I/usr/local/cuda/include
+override LDFLAGS += -L/usr/local/cuda/lib64
+
